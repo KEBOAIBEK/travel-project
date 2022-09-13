@@ -4,7 +4,7 @@
 
 :root {
 	--container-width: 1270px;
-	--container-padding: 15px;
+	--container-padding: 100px;
 	--secondary: rgba(15, 31, 28, 0.5);
 }
 
@@ -37,9 +37,15 @@ none {
 /*? Header syles */
 
 .header {
+	overflow: hidden;
 	position: relative;
 	min-height: 940px;
 	background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+	color: #fff;
+}
+
+.header a {
+	color: #fff;
 }
 
 .header-bottom {
@@ -50,14 +56,251 @@ none {
 	left: 0px;
 	top: 844px;
 
+
 	background-image: url(../img/header/header-bottom.svg);
 	background-size: 100%;
 }
 
 .header-top {
+	padding-top: 44px;
 	margin-bottom: 86px;
 }
 
-.header-content {
+.header__row {
+	display: flex;
+}
+
+.header__content {
 	max-width: 592px;
+	position: relative;
+	z-index: 1;
+}
+
+.header__img {
+	position: relative;
+	flex-grow: 1;
+}
+
+
+.header__img img {
+	position: absolute;
+	top: -210px;
+	right: -100px;
+	max-width: unset;
+	width: 894px;
+	height: 940px;
+}
+
+/*? Nav styles */
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.nav__list {
+	display: flex;
+	column-gap: 80px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.nav__list a {
+	position: relative;
+}
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+	content: "";
+
+	position: absolute;
+	left: 0;
+	right: 10px;
+	bottom: -6px;
+
+	display: block;
+	/* width: 35px; */
+	height: 4px;
+	background: #C4C4C4;
+	border-radius: 50px;
+}
+
+.nav__login {
+	display: flex;
+	align-items: center;
+	column-gap: 25px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+
+/*? Logo */
+
+.logo {
+	column-gap: 262px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	color: #fff;
+}
+
+/* ? Button */
+
+.btn {
+	display: flex;
+	padding: 13px 44px;
+
+	font-size: 15px;
+	font-weight: 500;
+
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+	border-radius: 100px;
+}
+
+.btn:hover {
+	color: #204434;
+	transition: color 0.5s ease-in;
+}
+
+.btn:active {
+	position: relative;
+	top: 2px;
+}
+
+/* ? header content */
+
+.header__badge {
+	margin-bottom: 7px;
+	display: inline-block;
+	padding: 11px 30px;
+	font-style: 18px;
+	font-weight: 500;
+
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 15px;
+}
+
+.header__title {
+	margin-bottom: 30px;
+	font-size: 55px;
+	font-weight: 400;
+}
+
+.header__text {
+	margin-bottom: 68px;
+	font-weight: 700;
+	font-size: 25px;
+	opacity: 0.5;
+}
+
+.header__btn {
+	display: inline-block;
+	padding: 27px 47px;
+	font-weight: 600;
+	font-size: 25px;
+
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+	border-radius: 27px;
+}
+
+.header__btn:hover {
+	color: #204434;
+	transition: color 0.5s ease-in;
+}
+
+.header__btn:active {
+	position: relative;
+	top: 2px;
+}
+
+/* ? Destinations */
+
+.destinations {
+	padding: 90px 0 100px;
+	overflow-x: hidden;
+}
+
+
+.destinations__row {
+	display: flex;
+	column-gap: 50px;
+}
+
+.destiination__content {
+	max-width: 456px;
+}
+
+.destination__slider {
+	width: 1110px;
+	flex-shrink: 0;
+}
+
+.destinations__title {
+	margin-bottom: 15px;
+	font-size: 55px;
+	font-weight: 600;
+}
+
+.destinations__title span {
+	font-size: 30px;
+}
+
+.destinations__text {
+	margin-bottom: 60px;
+	font-style: 25px;
+	font-weight: 500;
+	color: var(--secondary);
+}
+
+
+.destinations__btn {
+	display: inline-block;
+	padding: 25px 44px;
+	font-weight: 600;
+	font-size: 20px;
+	color: #fff;
+
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+	border-radius: 27px;
+}
+
+.destinations__btn:hover {
+	color: #204434;
+	transition: color 0.5s ease-in;
+}
+
+.destinations__btn:active {
+	position: relative;
+	top: 2px;
+}
+
+/* ? Slider */
+
+
+
+.slider__item {
+	width: 335px;
+	height: 402px;
+	object-fit: cover;
+	border-radius: 30px;
+
+	transition: 0.5s ease-in;
+}
+
+.slider__btn {
+	display: block;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+
+	display: flex;
+	align-items: center;
+
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #8B8B8B;
+	border-radius: 34px;
 }
