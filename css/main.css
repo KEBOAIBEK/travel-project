@@ -546,3 +546,48 @@ none {
 }
 
 
+.nav-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	color: inherit;
+}
+
+.nav-footer__list {
+	display: flex;
+	column-gap: 80px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.nav-footer__list a {
+	position: relative;
+}
+
+.nav-footer__list a.active::after,
+.nav-footer__list a:hover::after {
+	content: "";
+
+	position: absolute;
+	left: 0;
+	right: 10px;
+	bottom: -6px;
+
+	display: block;
+	/* width: 35px; */
+	height: 4px;
+	background: #C4C4C4;
+	border-radius: 50px;
+}
+
+.nav__login {
+	display: flex;
+	align-items: center;
+	column-gap: 25px;
+	font-size: 15px;
+	font-weight: 500;
+}
